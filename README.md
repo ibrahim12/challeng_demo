@@ -19,7 +19,7 @@ git@github.com:ibrahim12/challeng_demo.git
 
 ```
 virtualenv ve
-pip install -r requirements.txt
+pip install -r challeng_demo/requirements.txt
 
 ```
 
