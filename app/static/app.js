@@ -22,11 +22,12 @@ $(document).ready(function(){
     }
 
     function show_status(){
-        $("#reg-status").show();
+        $("#reg-status").removeClass('hide');
+        $("#reg-status").slideDown();
     }
 
     function hide_status(){
-        $("#reg-status").hide();
+        $("#reg-status").slideUp();
     }
 
     $("#register-form").submit(function(e){

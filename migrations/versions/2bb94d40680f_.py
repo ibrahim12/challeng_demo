@@ -1,13 +1,13 @@
 """empty message
 
-Revision ID: 8579c00772c
+Revision ID: 2bb94d40680f
 Revises: None
-Create Date: 2014-11-22 00:30:22.836986
+Create Date: 2014-11-22 02:06:47.181587
 
 """
 
 # revision identifiers, used by Alembic.
-revision = '8579c00772c'
+revision = '2bb94d40680f'
 down_revision = None
 
 from alembic import op
@@ -21,6 +21,7 @@ def upgrade():
     sa.Column('first_name', sa.String(length=64), nullable=True),
     sa.Column('last_name', sa.String(length=64), nullable=True),
     sa.Column('email', sa.String(length=120), nullable=True),
+    sa.Column('password', sa.String(length=128), nullable=True),
     sa.PrimaryKeyConstraint('id')
     )
     op.create_index(op.f('ix_user_email'), 'user', ['email'], unique=True)

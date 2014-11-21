@@ -23,6 +23,8 @@ def register():
             password = form.password.data
         )
 
+        user.hash_password()
+
         db.session.add(user)
         db.session.commit()
 

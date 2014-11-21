@@ -7,11 +7,10 @@ class User(db.Model):
     first_name = db.Column(db.String(64), index=True)
     last_name = db.Column(db.String(64))
     email = db.Column(db.String(120), index=True, unique=True)
-    password = db.String(db.String(128))
+    password = db.Column(db.String(128))
 
-
-    def has_password(self, password):
-        self.password = md5(password)
+    def hash_password(self):
+        self.password = md5(self.password).hexdigest()
 
     def verify_password(self, password):
-        return md5(password) == self.password
+        return md5(password).hexdigest() == self.password
