@@ -10,7 +10,7 @@ class RegistrationForm(Form):
     email = StringField('Email Address', [validators.Email()])
 
     password = PasswordField('Password', [
-        validators.Length(min=6, message='Password length must be greater than 6'),
+        validators.Length(min=6, message='Password length must be greater than 5'),
         validators.EqualTo('password1', message='Passwords must match')
     ])
     password1 = PasswordField('Repeat Password')
