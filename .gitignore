@@ -57,4 +57,4 @@ target/
 #IDE
 
 .idea
-ap
+app.db
